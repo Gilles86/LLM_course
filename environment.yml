@@ -1,0 +1,87 @@
+# ...existing code...
+name: llm_course
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - ipykernel
+  - jupyterlab
+  - notebook
+  - ipywidgets
+  - widgetsnbextension
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pillow
+  - tqdm
+  - cython
+  - h5py
+  - protobuf
+  - pyarrow
+  - numba
+  - sympy
+  - pip:
+    # Core ML frameworks (GPU vs CPU choice left to user's package selection)
+    - tensorflow>=2.12,<3.0
+    - torch
+    - torchvision
+    - torchaudio
+
+    # JAX (CPU wheel will be selected by pip by default; for GPU you must install jaxlib with the appropriate CUDA tag)
+    - jax
+    - jaxlib
+
+    # Hugging Face / NLP
+    - transformers
+    - datasets
+    - tokenizers
+    - sentencepiece
+    - huggingface-hub
+    - accelerate
+    - sentence-transformers
+
+    # Data, storage, and cloud
+    - gcsfs
+    - google-cloud-storage
+    - google-auth
+    - google-api-python-client
+    - fsspec
+    - s3fs
+    - pyorc
+
+    # Audio / vision / utilities often available in Colab
+    - opencv-python
+    - librosa
+    - soundfile
+    - scikit-image
+    - imageio
+
+    # Indexing / search / helpers
+    - faiss-cpu
+    - annoy
+
+    # Notebooks, plotting, monitoring
+    - plotly
+    - ipywidgets
+    - jupyterlab
+    - nbformat
+    - nbconvert
+    - wandb
+
+    # Misc useful packages
+    - protobuf
+    - python-dateutil
+    - pandas-profiling
+    - scikit-optimize
+    - requests
+    - beautifulsoup4
+
+    - tiktoken
+
+# ...existing code...
